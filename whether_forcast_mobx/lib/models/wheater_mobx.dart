@@ -2,7 +2,6 @@
 
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 part 'wheater_mobx.g.dart';
 
