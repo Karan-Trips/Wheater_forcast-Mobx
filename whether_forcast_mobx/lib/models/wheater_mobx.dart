@@ -15,9 +15,9 @@ abstract class _WheaterBase with Store {
   WheaterEnum wheaterEnum = WheaterEnum.isLoaded;
 
   @observable
-  String wheater = "";
+  String city = "";
   @action
-  void setWheater(String value) => wheater = value;
+  void setCity(String value) => city = value;
 
   @observable
   double degree = 0.00;

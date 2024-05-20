@@ -25,19 +25,18 @@ mixin _$Wheater on _WheaterBase, Store {
     });
   }
 
-  late final _$wheaterAtom =
-      Atom(name: '_WheaterBase.wheater', context: context);
+  late final _$cityAtom = Atom(name: '_WheaterBase.city', context: context);
 
   @override
-  String get wheater {
-    _$wheaterAtom.reportRead();
-    return super.wheater;
+  String get city {
+    _$cityAtom.reportRead();
+    return super.city;
   }
 
   @override
-  set wheater(String value) {
-    _$wheaterAtom.reportWrite(value, super.wheater, () {
-      super.wheater = value;
+  set city(String value) {
+    _$cityAtom.reportWrite(value, super.city, () {
+      super.city = value;
     });
   }
 
@@ -84,11 +83,11 @@ mixin _$Wheater on _WheaterBase, Store {
       ActionController(name: '_WheaterBase', context: context);
 
   @override
-  void setWheater(String value) {
+  void setCity(String value) {
     final _$actionInfo = _$_WheaterBaseActionController.startAction(
-        name: '_WheaterBase.setWheater');
+        name: '_WheaterBase.setCity');
     try {
-      return super.setWheater(value);
+      return super.setCity(value);
     } finally {
       _$_WheaterBaseActionController.endAction(_$actionInfo);
     }
@@ -120,7 +119,7 @@ mixin _$Wheater on _WheaterBase, Store {
   String toString() {
     return '''
 wheaterEnum: ${wheaterEnum},
-wheater: ${wheater},
+city: ${city},
 degree: ${degree},
 url: ${url}
     ''';

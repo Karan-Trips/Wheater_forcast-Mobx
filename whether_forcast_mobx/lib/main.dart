@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Observer(builder: (_) {
                   return Visibility(
                       child: Text(
-                    wheater.wheater,
+                    wheater.city,
                     style: const TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w500,
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 TextFormField(
                   onFieldSubmitted: (value) {
                     if (value.isNotEmpty) {
-                      wheater.setWheater(value);
+                      wheater.setCity(value);
                       wheater.getWheater();
                       wheater.setWheaterEnumdelay();
                       searchController.clear();
@@ -140,11 +140,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void Function()? onPressed() {
     return () {
       if (searchController.text.isNotEmpty) {
-        wheater.setWheater(searchController.text);
+        wheater.setCity(searchController.text);
         wheater.getWheater();
         wheater.setWheaterEnumdelay();
-        searchController.clear();
         wheater.changeWhaterImage();
+        searchController.clear();
       } else {
         var snackBar = const SnackBar(
           content: Text('Please Enter city'),
